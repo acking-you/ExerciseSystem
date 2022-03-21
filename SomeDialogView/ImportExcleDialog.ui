@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>617</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QLabel{
+font-size:11pt;
+}
+QLabel#title{
+font-size:15pt;
+}
+#Dialog{
+	background-color: rgb(255, 255, 255);
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout" rowstretch="1,2,4,4" rowminimumheight="0,0,0,0">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QWidget" name="w1" native="true">
+     <property name="styleSheet">
+      <string notr="true">#w1{
+	background-color: rgb(26, 140, 255);
+}
+QLabel{
+	color: rgb(255, 255, 255);
+}</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="0" column="0">
+       <widget class="QLabel" name="title">
+        <property name="font">
+         <font>
+          <pointsize>15</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Excle导入</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="info">
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font-size:8pt;</string>
+        </property>
+        <property name="text">
+         <string>只支持xlsx格式的excle文件，如果是xls文件可以到&lt;a href=&quot;https://onlineconvertfree.com/zh/convert-format/xls-to-xlsx/&quot;&gt;网站&lt;/a&gt;进行转化&lt;br/&gt;注意不要重复导入相同的数据到数据库，导入数据不会对内容进行判断的&lt;br/&gt;
+最后如果实在是导入错了，我提供了执行sql语句的方式去管理数据库</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="openExternalLinks">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QWidget" name="w2" native="true">
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+font-size:12pt;
+max-width:120px;
+min-height:40px;
+border-radius: 20px;
+border: 2px solid #334a59;
+color: rgb(51, 74, 89);
+}
+QPushButton:hover{
+	background-color: #1a8cff;
+	color:white;
+border: 1px solid white;
+}
+QPushButton:pressed{
+	background-color: #1768ff;
+	color:white;
+border: 1px solid white;
+}
+</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <widget class="QPushButton" name="import_judge">
+        <property name="text">
+         <string>导入判断题</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QPushButton" name="import_single">
+        <property name="text">
+         <string>导入单选题</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QPushButton" name="import_muti">
+        <property name="text">
+         <string>导入多选题</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QWidget" name="w3" native="true">
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+max-height:30px;
+}</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="0" column="0">
+       <widget class="QWidget" name="judge" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>110</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#judge{
+	background-color:#f7f8fa;
+	border-radius: 20px;
+}
+QLabel{
+color: #808080;
+max-width:150px;
+}
+QLineEdit{
+min-height:25px;
+border-radius: 10px;
+	background-color: white;
+}</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_5">
+         <property name="horizontalSpacing">
+          <number>2</number>
+         </property>
+         <property name="verticalSpacing">
+          <number>0</number>
+         </property>
+         <item row="0" column="2">
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string>答案在第几列？</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <widget class="QLineEdit" name="start_row"/>
+         </item>
+         <item row="1" column="2">
+          <widget class="QLineEdit" name="answer_c"/>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>章节在第几列？</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>题干在第几列？</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLineEdit" name="chapter_c">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>25</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QLabel" name="label_4">
+           <property name="text">
+            <string>起始行数</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="question_c"/>
+         </item>
+         <item row="0" column="4">
+          <widget class="QLabel" name="label_13">
+           <property name="text">
+            <string>结束行数</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="4">
+          <widget class="QLineEdit" name="end_row"/>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QWidget" name="w4" native="true">
+     <layout class="QGridLayout" name="gridLayout_6">
+      <item row="0" column="0">
+       <widget class="QWidget" name="choose" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>110</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#choose{
+	background-color:#f7f8fa;
+	border-radius: 20px;
+}
+QLabel{
+color: #808080;
+max-width:150px;
+}
+QLineEdit{
+min-height:25px;
+border-radius: 10px;
+	background-color: white;
+}</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_7">
+         <property name="horizontalSpacing">
+          <number>2</number>
+         </property>
+         <property name="verticalSpacing">
+          <number>0</number>
+         </property>
+         <item row="1" column="10">
+          <widget class="QLineEdit" name="start_row_2"/>
+         </item>
+         <item row="0" column="2" colspan="3">
+          <widget class="QLabel" name="label_7">
+           <property name="text">
+            <string>答案(列)</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_5">
+           <property name="text">
+            <string>章节(列)</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="5">
+          <widget class="QLabel" name="label_8">
+           <property name="text">
+            <string>A选项(列)</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="9">
+          <widget class="QLabel" name="label_11">
+           <property name="text">
+            <string>D选项(列)</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="6">
+          <widget class="QLabel" name="label_9">
+           <property name="text">
+            <string>B选项(列)</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="5">
+          <widget class="QLineEdit" name="a_c"/>
+         </item>
+         <item row="1" column="2">
+          <widget class="QLineEdit" name="answer_c_2"/>
+         </item>
+         <item row="1" column="8">
+          <widget class="QLineEdit" name="c_c"/>
+         </item>
+         <item row="1" column="6">
+          <widget class="QLineEdit" name="b_c"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLineEdit" name="chapter_c_2"/>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="label_6">
+           <property name="text">
+            <string>题干(列)</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="question_c_2"/>
+         </item>
+         <item row="0" column="8">
+          <widget class="QLabel" name="label_10">
+           <property name="text">
+            <string>C选项(列)</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="9">
+          <widget class="QLineEdit" name="d_c"/>
+         </item>
+         <item row="0" column="10">
+          <widget class="QLabel" name="label_12">
+           <property name="text">
+            <string>起始行数</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="11">
+          <widget class="QLabel" name="label_14">
+           <property name="text">
+            <string>结束行数</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="11">
+          <widget class="QLineEdit" name="end_row_2"/>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QWidget" name="w5" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>60</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>60</height>
+         </size>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_8">
+         <item row="0" column="0">
+          <widget class="QPushButton" name="submit_btn">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+font-size:12pt;
+max-width:120px;
+min-height:40px;
+border-radius: 15px;
+border: 2px solid #334a59;
+color: rgb(51, 74, 89);
+}
+QPushButton:hover{
+	background-color: rgb(255, 23, 131);
+	color:white;
+border: 1px solid white;
+}
+QPushButton:pressed{
+	background-color: #cf1369;
+	color:white;
+border: 1px solid white;
+}
+</string>
+           </property>
+           <property name="text">
+            <string>提交</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>import_judge</tabstop>
+  <tabstop>import_single</tabstop>
+  <tabstop>import_muti</tabstop>
+  <tabstop>chapter_c</tabstop>
+  <tabstop>question_c</tabstop>
+  <tabstop>answer_c</tabstop>
+  <tabstop>start_row</tabstop>
+  <tabstop>chapter_c_2</tabstop>
+  <tabstop>question_c_2</tabstop>
+  <tabstop>answer_c_2</tabstop>
+  <tabstop>a_c</tabstop>
+  <tabstop>b_c</tabstop>
+  <tabstop>c_c</tabstop>
+  <tabstop>d_c</tabstop>
+  <tabstop>start_row_2</tabstop>
+  <tabstop>submit_btn</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

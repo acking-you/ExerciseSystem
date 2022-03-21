@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ErrorNoteDialog</class>
+ <widget class="QWidget" name="ErrorNoteDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>580</width>
+    <height>592</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>580</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>580</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>ErrorNoteDialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <item row="2" column="1">
+    <widget class="QListWidget" name="q_list">
+     <property name="styleSheet">
+      <string notr="true">QListWidget::item{
+	height:60px;
+}
+QListView {
+	font: 25 12pt &quot;Microsoft YaHei&quot;;
+	border: 15px solid white; /* 设置边框的大小，样式，颜色 */
+	border-radius: 10px;
+}
+QListView::item:hover {
+	background-color: transparent;
+	padding: 10px;
+	border-left: 3px solid rgb(130, 130, 130);
+}
+QListView::item:selected {
+	background-color: transparent;
+	color: black;
+	padding: 10px;
+	border-left: 3px solid black;
+}</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>题目：我是我是我是我是我是我是我是我是我是我是...      错误次数：1                id=32323</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QComboBox" name="question_c">
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QComboBox {
+    font-size: 22px;
+    color: white;
+    font-weight: bold;
+    min-height:50px;
+	padding-left:260px;
+	background-color: rgb(26, 140, 255);
+}
+/*QComboBox::drop-down {
+    border: 1px solid red;
+}*/
+QComboBox QAbstractItemView
+{
+   font-size: 22px;
+    color: white;
+    font-weight: bold;
+    min-height:50px;
+	background-color: #74aefd;
+}
+QComboBox QAbstractItemView:hover
+{
+   font-size: 22px;
+    color: white;
+    font-weight: bold;
+    min-height:50px;
+	background-color: #b4d1fe;
+}
+</string>
+     </property>
+     <property name="editable">
+      <bool>false</bool>
+     </property>
+     <item>
+      <property name="text">
+       <string>判断题</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>单选题</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>多选题</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
